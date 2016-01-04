@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     $("#addStoreForm").submit(addStore);
+    populuteFields();
 
 
     //CategoriesTab and informationTab can be combined if we want the same naming convention for both (Tab instead of categoriesTab, etc.
@@ -37,6 +38,10 @@ $(document).ready(function() {
         var categories = [];
         var geocoder = new google.maps.Geocoder();
 
+        if(retrievedInfo._id){
+            editStore();
+        }
+
         $.each($(this).serializeArray(), function (i, field) {
             storeInfo[field.name] = field.value;
         });
@@ -69,10 +74,6 @@ $(document).ready(function() {
             }
         });
 
-        $(".appendDom").empty();
-        $(this).find("input[type=text]").val("");
-        $(this).find("textarea").val("");
-        $(this).find("input[type=checkbox]").removeAttr('checked');
 
 
 
@@ -83,12 +84,46 @@ $(document).ready(function() {
                 url: "/addStore",
                 data: storeInfo,
                 success: function(data){
+                    clearForm();
 
                 }
             });
         }
 
+
+
     }
+
+var clearForm = function() {
+    //$(".addStoreForm").empty();
+    $("#addStoreForm").find("input[type=text]").val("");
+    $("#addStoreForm").find("textarea").val("");
+    $("#addStoreForm").find("input[type=checkbox]").removeAttr('checked');
+    localStorage.removeItem('editInfo');
+};
+
+var populuteFields = function() {
+    var retrievedInfo = localStorage.getItem('editInfo');
+    retrievedInfo = JSON.parse(retrievedInfo);
+    $(".storename").val(retrievedInfo.name);
+    $(".address").val(retrievedInfo.address);
+    $(".description").val(retrievedInfo.description);
+    $(".website").val(retrievedInfo.website);
+    $(".image").val(retrievedInfo.image);
+
+};
+
+var editStore = function() {
+    $.ajax({
+        type: "GET",
+        url: "/editStore",
+        data: storeInfo,
+        success: function(data){
+            clearForm();
+
+        }
+    });
+};
 
 
 
