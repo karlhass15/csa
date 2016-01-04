@@ -76,7 +76,7 @@ function appDom(array) {
             '<div class="col-xs-4">' +
                 //'<img src="http://www.logoorange.com/thumb-portfolio/logo_thumbnail_military-design-logo.png" alt="store logo"/>'+
 
-            '<img src="http://www.fillmurray.com/500/400" alt="store logo"/>'+
+            '<img src=" ' + array[i].image + ' " />' +
 
             '</div>' +
             '<div class="col-xs-8">' +

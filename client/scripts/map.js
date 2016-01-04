@@ -159,13 +159,14 @@ var setContentstring = function(store){
     var long = store.latlong[1];
     var mapsLink = query + lat + "," + long;
 
+    console.log("here is store ",store);
+
     contentString =
         '<div class="container">' +
         '<div class="col-xs-12">' +
         //'<img src="http://www.logoorange.com/thumb-portfolio/logo_thumbnail_military-design-logo.png" alt="store logo"/>'+
-        //    '<img src='+store.image+'>' + ///this line grabs url input from form correctly
-        '<img src="http://www.fillmurray.com/500/400" alt="store logo"/>'+
-
+        // image tag below should work, color is webstorm error
+        '<img src=" ' + store.image + ' " />' +
         '</div>' +
         '<div class="col-xs-12">' +
 
