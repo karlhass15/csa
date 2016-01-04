@@ -12,7 +12,7 @@ var store =  require('./routes/addStore');
 var Stores = require('./routes/storesAdmin');
 var Delete =require('./routes/storesAdmin');
 var editstore =require('./routes/storesAdmin');
-//var getstoreforedit =require('./routes/getstoreforedit');
+var getstoreforedit =require('./routes/getstoreforedit');
 
 
 var category = require('./routes/categorySearch');
@@ -51,7 +51,7 @@ mongoose.connect(process.env.MONGOLAB_URI ||  'mongodb://localhost:27017/conscio
 app.use('/deletestores', Delete);
 app.use('/getstores', Stores);
 app.use('/editstore', editstore);
-//app.use('/getstoreforedit', getstoreforedit);
+app.use('/getstoreforedit', getstoreforedit);
 app.use('/contact', contact);
 app.use('/addStore', store);
 app.use('/categorysearch', category);
