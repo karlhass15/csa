@@ -1,7 +1,7 @@
 //Variable declarations
 var express = require('express');
 var router = express.Router();
-var Store = require('../Models/store');
+var Store = require('../models/store');
 
 
 

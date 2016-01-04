@@ -3,7 +3,7 @@ var router = express.Router();
 var path = require('path');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var mailer = require('../Models/email.server.model');
+var mailer = require('../models/email.server.model');
 
 var Schema = mongoose.Schema;
 
