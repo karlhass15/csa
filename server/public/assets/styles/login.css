@@ -1,0 +1,30 @@
+header {
+    font-family: 'ostrichBlack';
+    font-size: 48px;
+    color: white;
+    background-color: #CCCC00;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-bottom: 10px solid #333333;
+}
+
+/*CONTACT FORM*/
+
+#grayBackground {
+    /*background-color: #4a4a4c;*/
+}
+form {
+    display: inline-block;
+}
+input {
+    border-radius: 5px;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+button {
+    border-radius: 5px;
+    background-color: #CCCC00;
+    float: right;
+    margin-right: 20px;
+}

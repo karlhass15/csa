@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Information</title>
+    <link rel="stylesheet" href="/assets/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+
+    <script type="text/javascript" src="../vendors/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="../vendors/jquery-ui.js"></script>-->
+    <script type="text/javascript" src="/assets/scripts/email.min.js"></script>
+    <script type="text/javascript" src="../vendors/bootstrap.min.js"></script>
+
+    <!--<link rel="stylesheet" href="../vendors/smoothness/jquery-ui.css">-->
+
+
+</head>
+
+
+<header>
+    <div id="pageHeader">Information</div>
+</header>
+
+
+
+<body>
+
+<div id="informationList">
+    <ul id="informationTab" class="nav nav-tabs">
+        <li class="active col-xs-3"><a href="#about" data-toggle="tab">ABOUT</a></li>
+        <li class="col-xs-3"><a href="#help" data-toggle="tab">HELP</a></li>
+        <li class="col-xs-6"><a href="#createShortcut" data-toggle="tab">CREATE SHORTCUT</a></li>
+        <!--<li><a href="#tabs-3">CREATE SHORTCUT</a></li>-->
+    </ul>
+
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="about">
+            <h1>Here is a little about The Conscious Shopper</h1>
+        </div>
+
+        <div class="tab-pane fade" id="help">
+            <div id="grayBackground">
+
+            <p>Would you like us to know about a store you really love? Perhaps you have a suggestion regarding the site.
+                Or maybe you'd just like to tell us how you think we're doing. Fill out the form below to let us know. THANKS! </p>
+
+            <div id="contact">
+                <h3>Contact/Suggest a Store</h3>
+                <form id="contactForm" method="POST" action="/contact">
+                    <input type="text" placeholder="Name" name="name">
+                    <input type="text" placeholder="Email" name="email">
+                <textarea type="text" placeholder="Message" value="Message" name="message"
+                          required></textarea>
+                    <button type="submit btn" onclick="window.location.href='index.html'">Submit</button>
+                </form>
+            </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="createShortcut">
+            <div class="container">
+            <h1>iPad and iPhone with Safari</h1>
+              <ol>
+                  <li>From the Conscious Shopper app select the bookmark icon</li>
+                  <li>Select ‘add to home screen’ when bookmark options appear</li>
+                  <li>Change the shortcut name to ‘Conscious Shopper’</li>
+                  <li>Conscious shopper shortcut will appear on home screen</li>
+              </ol>
+
+            <h1>Android or iPhone with Chrome</h1>
+                <ol>
+                    <li>From the Conscious Shopper app select the menu button</li>
+                    <li>(three vertical dots next to the URL)</li>
+                    <li>From the menu select ‘add to Home screen’</li>
+                    <li>Conscious shopper shortcut will appear on home screen</li>
+                </ol>
+
+            <h1>Android or iPhone with Firefox</h1>
+                <ol>
+                    <li>From the Conscious Shopper app select the title bar</li>
+                    <li>From the title menu select ‘Bookmarks’</li>
+                    <li>Long Tap the bookmark (hold it for a little longer) and select “Add to Home Screen”</li>
+                    <li>Conscious shopper shortcut will appear on home screen</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+<footer>
+
+    <div id="navBar" class="row">
+        <div id="store" class="col-xs-3"><a href="/assets/views/storelist.html"></a></div>
+        <div id="category" class="col-xs-3"><a href="/assets/views/categories.html"></a></div>
+        <div id="map" class="col-xs-3"><a href="/assets/views/map.html"></a></div>
+        <div id="information" class="col-xs-3"><a href="/assets/views/information.html"></a></div>
+
+    </div>
+
+</footer>
+
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Admin</title>
+
+    <!--Link-->
+    <link rel="stylesheet" href="/assets/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+
+    <!--Scripts-->
+    <script type="text/javascript" src="/assets/vendors/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="/assets/scripts/app.min.js"></script>-->
+    <script type="text/javascript" src="/assets/scripts/admin.min.js"></script>
+
+</head>
+<body>
+<div class ="container">
+    <header>
+        <div id="pageHeader">ADMIN</div>
+    </header>
+
+
+    <form id="storeSearchEdit">
+    <!--input needs function to produce list upon ENTER-->
+<input type="text" id="storeAdminSearch" name="storeAdminSearch"  placeholder="SEARCH FOR STORE">
+    </form>
+<button class="addstoreButton" onclick="window.location.href='add00store.html'">ADD STORE</button>
+
+
+</div>
+
+
+<!--ADD IN MIN.JS FILE THAT CORESPONDS !!!!!!!!!!-->
+<div id="storeContainer"></div>
+
+</body>
+</html>
