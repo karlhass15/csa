@@ -1,12 +1,15 @@
 var myLatLng = {};
 var storesFound = [];
 var storeContent = [];
+var storeObject;
 
 
 $(document).ready(function(){
 
     //displayLoading();
 
+    localData();
+    appDom(storeObject);
 
 
 });
@@ -28,36 +31,32 @@ var findStore = function(){
             return storesFound;
         }
     });
-};
+}
 
 
 
 
 
 
-function appDom(array) {
+function appDom(store) {
 
-
-
-
-    for (var i = 0; i < array.length; i++) {
-
-        var miles = (array[i].distance * 3963.2).toFixed(1);
+    console.log("this is store in appDom ",store);
+        var miles = (store.distance * 3963.2).toFixed(1);
         var query = "https://www.google.com/maps/dir/Current+Location/";
-        var lat = array[i].latlong[0];
-        var long = array[i].latlong[1];
+        var lat = store.latlong[0];
+        var long = store.latlong[1];
         var mapsLink = query + lat + "," + long;
 
-        $('#store').append( '<div class="container">' +
+        $('#storeContainer').append( '<div class="container">' +
             '<div class="col-xs-4">' +
             '<img src="http://www.logoorange.com/thumb-portfolio/logo_thumbnail_military-design-logo.png" alt="store logo"/>'+
             '</div>' +
             '<div class="col-xs-8">' +
-            '<h4><strong></strong>'+ array[i].name +' </strong>' + miles+ ' miles</h4>' +
+            '<h4><strong></strong>'+ store.name +' </strong>' + miles+ ' miles</h4>' +
             '<button><a href=" '+ mapsLink+ ' ">Directions</button>' +
             '</div>'+
             '</div>');
-    }
+
 
 
 }
@@ -72,4 +71,14 @@ function displayCompleted(){
     $('#spin').removeClass('spinner');
 
 
+}
+
+function localData(){
+    var retrievedObject = localStorage.getItem('kittyFoo');
+    console.log('retrievedObject: ', JSON.parse(retrievedObject));
+    storeObject = JSON.parse(retrievedObject);
+    console.log("storeObject in local data ", storeObject);
+
+
+    return storeObject;
 }

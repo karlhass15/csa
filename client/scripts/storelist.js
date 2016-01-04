@@ -8,6 +8,20 @@ $(document).ready(function(){
     displayLoading();
     getCurrentLocation();
 
+ $('body').on('click', '.action', function(){
+     //clear storage every time the button is clicked
+     localStorage.clear();
+     console.log('working');
+     console.log($(this).data('list'));
+     var arrayPosition = Number($(this).data('list'));
+     console.log(storesFound);
+     console.log(storesFound[arrayPosition].name);
+     //set
+     localStorage.setItem('kittyFoo', JSON.stringify(storesFound[arrayPosition]));
+     window.location.href='store.html';
+
+ });
+
 
 });
 
@@ -73,6 +87,7 @@ function appDom(array) {
         var mapsLink = query + lat + "," + long;
 
         $('#storeList').append( '<div class="container">' +
+            '<h5 class="action" data-list=" '+ i +' ">This individual</h5> '+
             '<div class="col-xs-4">' +
                 //'<img src="http://www.logoorange.com/thumb-portfolio/logo_thumbnail_military-design-logo.png" alt="store logo"/>'+
 
