@@ -27,7 +27,6 @@ $(document).ready(function() {
     //$('#goods').tab('show'); // Select tab by name
     //$('#ethicalStandard').tab('show'); // Select tab by name
 
-
 });
 
     function addStore(){
@@ -73,6 +72,7 @@ $(document).ready(function() {
         $(this).find("input[type=text]").val("");
         $(this).find("textarea").val("");
         $(this).find("input[type=checkbox]").removeAttr('checked');
+
 
 
 

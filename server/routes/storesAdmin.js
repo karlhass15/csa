@@ -14,6 +14,7 @@ var Store = require('../models/store');
 
     storesAdminrouter.get('/', function(req,res){
 
+        //Search for stores
         //passing venue as key from manually created object in client
         var query = req.query.venue;
 console.log("query value", query);
