@@ -12,9 +12,12 @@ $(document).ready(function() {
         });
 
         $("#storeContainer").on('click', '.delete', deleteStore);
+        $("#storeContainer").on('click', '.edit', editStore);
 
              //getStores();
                 updateDOM();
+
+
 
 });
 
@@ -126,14 +129,16 @@ function editStore() {
             console.log("Here is the /editstore data", data);
             console.log(editStoreId);
             editStoreId = data;
-            populateFields(data);
+            localStorage.setItem('editInfo', JSON.stringify(editStoreId));
+            editRedirect();
         }
     });
 }
 //
-var populateFields = function(data){
+var editRedirect = function(){
     window.location.replace('/assets/views/add00store.html');
-    console.log("test");
+
+    console.log('retrievedInfo :', JSON.parse(retrievedInfo));
 
     //console.log(editStoreId);
     //$("#addStoreForm")address.val(data.address)
