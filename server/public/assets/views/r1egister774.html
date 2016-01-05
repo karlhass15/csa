@@ -20,21 +20,20 @@
 <body>
 <div class ="container col-md-4">
     <header>
-        <div id="pageHeader">Admin Login</div>
+        <div id="pageHeader">Admin Register</div>
     </header>
 
 
     <div id="grayBackground">
 
 
-<form action="/login" method="post">
-    <h3>Admin Login</h3>
-    <input type="text" placeholder="Username" name="username"/><br/>
-    <input type="password" placeholder="Password"   name="password"/><br/>
-    <button  id="login">Login</button>
-    <!--onlogin="window.location.href='sct97ad33min.html'"-->
-</form>
 
+        <h3>Register</h3>
+        <form action="/register" method="post">
+            <input type="text" placeholder="Username" name="username"/><br/>
+            <input type="password" placeholder="Password"  name="password"/><br/>
+            <button onclick="window.location.href='sct97ad33min.html'" id="register" >Register</button>
+        </form>
     </div>
 </div>
 </body>
