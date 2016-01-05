@@ -134,12 +134,7 @@ function editStore() {
 //
 var editRedirect = function(){
     window.location.replace('/assets/views/add00store.html');
-
-    console.log('retrievedInfo :', JSON.parse(retrievedInfo));
-
-    //console.log(editStoreId);
-    //$("#addStoreForm")address.val(data.address)
-}
+};
 
 
 

@@ -7,7 +7,6 @@ var Store = require('../models/store');
 
 //Adding a new store to the Database
 router.post('/', function(req,res){
-    console.log(req);
     var addedStore = new Store({
         "name" : req.body.storename,
         "address" : req.body.address,

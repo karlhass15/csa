@@ -17,7 +17,6 @@ var Store = require('../models/store');
         //Search for stores
         //passing venue as key from manually created object in client
         var query = req.query.venue;
-console.log("query value", query);
         if(query) {
             Store.find({"name": query}, function (err, data) {
                 if (err) {
@@ -39,7 +38,6 @@ console.log("query value", query);
 
 //Will delete stores when user hit delete button attached to store.
 storesAdminrouter.delete('/', function(req,res){
-    console.log("this is", req.body.id);
 
     Store.findByIdAndRemove({"_id" : req.body.id}, function(err, data){
         if(err) console.log(err);
@@ -51,8 +49,6 @@ storesAdminrouter.delete('/', function(req,res){
 
 //Will grab store by id when  edit button attached to store is clicked.
 storesAdminrouter.post('/', function(req,res){
-    console.log("this is edit store id", req.body.id);
-    console.log("this is entire store body", req.body);
 
     Store.findById({"_id" : req.body.id}, function(err, data){
         if(err) console.log(err);
