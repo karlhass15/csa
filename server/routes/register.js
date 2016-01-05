@@ -4,8 +4,9 @@ var passport = require('passport');
 var path = require('path');
 var Users = require('../models/user');
 
+//original /assets/views/register.html
 router.get('/', function (req, res, next){
-    res.sendFile(path.resolve(__dirname, '../public/views/register.html'));
+    res.sendFile(path.resolve(__dirname, '../public/views/r1egister774.html'));
 });
 
 router.post('/', function(req,res,next){
@@ -13,7 +14,7 @@ router.post('/', function(req,res,next){
         if(err){
             next(err);
         } else {
-            res.redirect('/login');
+            res.redirect('assets/views/reg429log33in.html');
         }
     }) ;
 });
