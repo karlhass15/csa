@@ -1,26 +1,17 @@
 var myLatLng = {};
 var storesFound = [];
 var storeContent = [];
-
-
 $(document).ready(function(){
-
-
     displayLoading();
-
-
     $('body').css('overflow','hidden');
-
     var flag = 1;
-
     $('#popupButton').click(function() {
         if(flag == 1){
-        $("#navMenu")
-            .stop(true, false)
-            .animate({
-                bottom: 150
-            }, 600);
-
+            $("#navMenu")
+                .stop(true, false)
+                .animate({
+                    bottom: 150
+                }, 600);
             flag = 0;
         } else {
             $("#navMenu")
@@ -30,17 +21,24 @@ $(document).ready(function(){
                 }, 600);
             flag = 1;
         }
-
         //return false;
     });
-
-
-
     getCurrentLocation();
 
+//listener
+    $('body').on('click', '.action', function(){
+        //clear storage every time the button is clicked
+        localStorage.clear();
+        console.log('working');
+        console.log($(this).data('list'));
+        var arrayPosition = Number($(this).data('list'));
+        console.log(storesFound[arrayPosition]);
+        ////set
+        localStorage.setItem('kittyFoo', JSON.stringify(storesFound[arrayPosition]));
+        window.location.href='store.html';
+
+    });
 });
-
-
 //Function to find the store -- called within getCurrentLocation
 var findStore = function(){
     console.log("The location data being sent to the db as search criteria: ", myLatLng);
@@ -54,16 +52,13 @@ var findStore = function(){
             console.log("The storesFound: ", storesFound);
             displayCompleted();
             initMap(myLatLng, storesFound);
-
             return storesFound;
         }
     });
 };
-
 //Geolocation function to get current location
 var getCurrentLocation = function() {
     myLatLng = {};
-
     //Geolocation to get the current location
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -76,8 +71,6 @@ var getCurrentLocation = function() {
         //Geolocation isn't supported by the browser
         handleLocationError(false, infoWindow, map.getCenter());
     }
-
-
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
@@ -85,18 +78,13 @@ var getCurrentLocation = function() {
             'Error: Your browser doesn\'t support geolocation.');
     }
 };
-
-
-
 //Map initialization function -- called within findStore function
 var initMap = function(myLocation, storesFound){
     storeContent = [];
     var infoWindow = new google.maps.InfoWindow(), otherMarker, i;
-
     var map = new google.maps.Map(document.getElementById('mapContainer'), {
         zoom: 12,
         center: myLocation,
-
         streetViewControl: true,
         streetViewControlOptions: {
             position: google.maps.ControlPosition.RIGHT_TOP
@@ -105,15 +93,11 @@ var initMap = function(myLocation, storesFound){
         zoomControlOptions: {
             position: google.maps.ControlPosition.RIGHT_TOP
         }
-
-
     });
-
     var marker = new google.maps.Marker({
         position: myLocation,
         map: map,
         title: 'You Are Here',
-
     });
     marker.addListener('click', function() {
         console.log("center");
@@ -122,23 +106,18 @@ var initMap = function(myLocation, storesFound){
     //Iteration through returned stores to create markers on the map
     for (var i = 0; i < storesFound.length; i++) {
         console.log("Processing the marker data: ", storesFound[i]);
-
-
         var otherMarker = new google.maps.Marker({
             position: new google.maps.LatLng(storesFound[i].latlong[0], storesFound[i].latlong[1]),
             map: map,
             title: storesFound[i].name,
             //will likely need to iterate through an icon counter
             icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png',
-
         });
-
         //Setting up the store content in an array for easy reference to the popup creation below
-        var storeData = setContentstring(storesFound[i]);
+        var storeData = setContentstring(storesFound[i], i);
         storeContent.push(storeData);
         console.log("The storeContent is: ", storeContent);
-
-    //creating the popup window for each marker
+        //creating the popup window for each marker
         google.maps.event.addListener(otherMarker, 'click', (function (otherMarker, i) {
             console.log("click!");
             return function(){
@@ -146,51 +125,38 @@ var initMap = function(myLocation, storesFound){
                 infoWindow.open(map, otherMarker);
             }
         })(otherMarker, i));
-
     }
     /////end init map
 };
-
-var setContentstring = function(store){
-
+var setContentstring = function(store, num){
     var miles = (store.distance * 3963.2).toFixed(1);
     var query = "https://www.google.com/maps/dir/Current+Location/";
     var lat = store.latlong[0];
     var long = store.latlong[1];
     var mapsLink = query + lat + "," + long;
-
     console.log("here is store ",store);
-
     contentString =
         '<div class="container">' +
         '<div class="col-xs-12">' +
-        //'<img src="http://www.logoorange.com/thumb-portfolio/logo_thumbnail_military-design-logo.png" alt="store logo"/>'+
-        // image tag below should work, color is webstorm error
+            //'<img src="http://www.logoorange.com/thumb-portfolio/logo_thumbnail_military-design-logo.png" alt="store logo"/>'+
+            // image tag below should work, color is webstorm error
         '<img src=" ' + store.image + ' " />' +
         '</div>' +
         '<div class="col-xs-12">' +
-
-        '<h4><a href="store.html"> '+store.name+'</a></h4>' +
+        '<h4 class = "action" data-list=" '+ num +' "> '+store.name+'</h4>' +
         '<h5>' + store.description + '</h5></br>'+
         '<h5><strong>' + miles + ' Miles</strong></h5>' +
-
             //'<h5><a href=" '+var+' "></a>Website</h5>' + NEED TO SET UP DIRECTIONAL DATA
         '<button><a href=" '+mapsLink+' ">Directions</a></button>' +
         '</div>'+
         '</div>';
     return contentString;
-
 };
-
 function displayLoading(){
-
     $('#spin').addClass('spinner');
     $('body').addClass('backgroundSpin');
 }
-
 function displayCompleted(){
     $('#spin').removeClass('spinner');
     $('body').removeClass('backgroundSpin');
-
-
 }
