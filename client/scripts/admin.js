@@ -16,9 +16,6 @@ $(document).ready(function() {
 
              //getStores();
                 updateDOM();
-
-
-
 });
 
 

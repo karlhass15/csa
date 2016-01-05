@@ -1,3 +1,5 @@
+var retrievedInfo;
+
 $(document).ready(function() {
 
     $("#addStoreForm").submit(addStore);
@@ -15,19 +17,6 @@ $(document).ready(function() {
         }
     });
 
-    //$('#informationTab a').click(function (e) {
-    //    if($(this).parent('li').hasClass('active')){
-    //        $( $(this).attr('href') ).hide();
-    //    }
-    //    else {
-    //        e.preventDefault();
-    //        $(this).tab('show');
-    //    }
-    //});
-
-    //$('#goods').tab('show'); // Select tab by name
-    //$('#ethicalStandard').tab('show'); // Select tab by name
-
 });
 
     function addStore(){
@@ -38,7 +27,8 @@ $(document).ready(function() {
         var geocoder = new google.maps.Geocoder();
 
         if(retrievedInfo._id){
-            editStore();
+            console.log("found the ID! It is: ", retrievedInfo._id);
+            //editStore();
         }
 
         $.each($(this).serializeArray(), function (i, field) {
@@ -103,8 +93,9 @@ var clearForm = function() {
 };
 
 var populuteFields = function() {
-    var retrievedInfo = localStorage.getItem('editInfo');
+    retrievedInfo = localStorage.getItem('editInfo');
     retrievedInfo = JSON.parse(retrievedInfo);
+    console.log("This is the retrievedInfo: ", retrievedInfo);
     $(".storename").val(retrievedInfo.name);
     $(".address").val(retrievedInfo.address);
     $(".description").val(retrievedInfo.description);
@@ -116,8 +107,8 @@ var populuteFields = function() {
 var editStore = function() {
     $.ajax({
         type: "GET",
-        url: "/editStore",
-        data: storeInfo,
+        url: "/getstoreforedit",
+        data: retreivedInfo,
         success: function(data){
             clearForm();
 
