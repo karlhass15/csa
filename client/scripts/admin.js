@@ -76,7 +76,7 @@ $(document).ready(function() {
                 var el = "<div class='well col-md-3'>" +
                     "<p>" + data[i].name + "</p>" +
                     "<button class='btn btn-danger delete' data-id='" + data[i]._id + "'>Delete</button>" +
-                    "<button class='btn btn-primary edit' data-id='" + data[i]._id + "'>Edit</button>" +
+                    "<button  class='btn btn-primary edit' data-id='" + data[i]._id + "' >Edit</button>" +
 
                     "</div>";
                 $("#storeContainer").append(el);
@@ -133,7 +133,7 @@ function editStore() {
 }
 //
 var editRedirect = function(){
-    window.location.replace('/assets/views/add00store.html');
+    window.location.replace('/assets/views/ed1tst0re.html');
 };
 
 

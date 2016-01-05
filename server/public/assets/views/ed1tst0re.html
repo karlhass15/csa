@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Store</title>
+    <!--<link rel="stylesheet" href="/vendors/bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="/assets/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+
+
+    <script type="text/javascript" src="/assets/vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/admin.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+</head>
+
+<header>
+    <div id="pageHeader">Edit store</div>
+</header>
+
+<body>
+<div id="grayBackground" class="col-md-12">
+    <div class="container col-md-4">
+        <form id="addStoreForm">
+            <label for="storename">STORE NAME:</br></label>
+            <input type="text" name="storename" class="storename" id="storename">
+
+            <label for="address"></br>ADDRESS: </br></label>
+            <input type="text" name="address" class="address" id="address">
+
+            <label for="description"></br>DESCRIPTION: </br></label>
+            ​<textarea id="description" name="description" class="description" rows="10" cols="60"></textarea>
+
+            <!--<input type="text" name="description" class="description" id="description">-->
+
+            <label for="checklist"></br>CATEGORIES: </br></label>
+
+            <div class="checklist" id="checklist">
+
+                <ul><label><div class="checklistHeader">VALUES CATEGORIES</label></ul>
+
+                <ul><label><input type="checkbox" class="group1" value="Recycled/Reclaimed" />Recycled/Reclaimed</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Secondhand" />Secondhand</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Eco-Friendly" />Eco-Friendly</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Locally Made" />Locally Made</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Sustainable" />Sustainable</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Handmade" />Handmade</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Transparency" />Transparency</label></ul>
+
+
+                <ul><label><div class="checklistHeader">PRODUCT CATEGORIES</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Accessories" />Accessories</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Artwork" />Artwork</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Baby" />Baby</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Beauty" />Beauty</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Chocolate" />Chocolate</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Clothing-Children" />Clothing-Children</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Clothing-Men" />Clothing-Men</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Clothing-Women" />Clothing-Women</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Coffee" />Coffee</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Decor" />Decor</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Dining" />Dining</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Food" />Food</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Formalwear" />Formalwear</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Furniture" />Furniture</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Gifts" />Gifts</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Home Goods" />Home Goods</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Hygiene" />Hygiene</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Jewelry" />Jewelry</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Outerwear" />Outerwear</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Paper Goods" />Paper Goods</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Shoes" />Shoes</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Sporting Goods" />Sporting Goods</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Textile" />Textile</label></ul>
+                <ul><label><input type="checkbox" class="group1" value="Toys" />Toys</label></ul>
+
+
+
+            </div>
+
+            <label for="website"></br>WEBSITE URL: </br></label>
+            <input type="text" name="website" class="website" id="website">
+
+            <label for="image"></br>UPLOAD IMAGE: </br></label>
+            <input type="text" name="image" class="image" id="image">
+
+
+
+            <button type="submit" class="submitButton">SUBMIT</button>
+
+        </form>
+
+
+    </div>
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
