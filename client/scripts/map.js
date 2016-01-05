@@ -10,14 +10,14 @@ $(document).ready(function(){
             $("#navMenu")
                 .stop(true, false)
                 .animate({
-                    bottom: 150
+                    bottom: 200
                 }, 600);
             flag = 0;
         } else {
             $("#navMenu")
                 .stop(true, false)
                 .animate({
-                    bottom: 50
+                    bottom: 100
                 }, 600);
             flag = 1;
         }
