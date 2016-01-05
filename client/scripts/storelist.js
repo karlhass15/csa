@@ -8,6 +8,20 @@ $(document).ready(function(){
     displayLoading();
     getCurrentLocation();
 
+ $('body').on('click', '.action', function(){
+     //clear storage every time the button is clicked
+     localStorage.clear();
+     console.log('working');
+     console.log($(this).data('list'));
+     var arrayPosition = Number($(this).data('list'));
+     console.log(storesFound);
+     console.log(storesFound[arrayPosition].name);
+     //set
+     localStorage.setItem('kittyFoo', JSON.stringify(storesFound[arrayPosition]));
+     window.location.href='store.html';
+
+ });
+
 
 });
 
@@ -73,14 +87,15 @@ function appDom(array) {
         var mapsLink = query + lat + "," + long;
 
         $('#storeList').append( '<div class="container">' +
+
             '<div class="col-xs-4">' +
                 //'<img src="http://www.logoorange.com/thumb-portfolio/logo_thumbnail_military-design-logo.png" alt="store logo"/>'+
 
             '<img src=" ' + array[i].image + ' " />' +
-
             '</div>' +
             '<div class="col-xs-8">' +
-            '<h4><a href="store.html"><strong>'+ array[i].name +' </strong></a></h4></br><h5>' + miles+ ' miles</h5>' +
+            '<h1 class="action" data-list=" '+ i +' "><strong>'+ array[i].name +' </strong></h1>' +
+            '<h2>' + miles+ ' miles</h2>' +
             '<button><a href=" '+ mapsLink+ ' ">Directions</button>' +
             '</div>'+
             '</div>');
