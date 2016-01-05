@@ -82,6 +82,8 @@ header {
 #grayBackground {
     background-color: #e0e0e0;
     width: 100%;
+    padding: 2%;
+    height: 100vmax;
     /*margin-top: 10px;*/
 }
 
@@ -297,7 +299,7 @@ li {
     position: relative;
     /*bottom: 0;*/
     z-index: 1;
-    bottom: 50px;
+    bottom: 100px;
     margin-bottom: -50px;
     /*background-color: #4a4a4c;*/
     /*height: 100px;*/
@@ -314,11 +316,16 @@ li {
     font-family: 'ostrichBlack';
     text-align: center;
     vertical-align: middle;
-    height: 50px;
-    width:50px;
+    height: 100px;
+    width:100px;
     padding-top: 15px;
     border-radius: 20% 20% 0 0;
     z-index: 1;
+}
+
+#popupButton{
+    font-size: 25pt;
+    margin-top: 15%;
 }
 
 #tabLinks{
@@ -587,23 +594,67 @@ li {
 }
 
 #grayBackground p {
-    height: 100%;
-    padding: 12px;
-    font-family: 'ostrich';
-    font-size: 2em;
-    line-height: 24pt;
+    /*padding: 12px;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 4vmin;
+    line-height: 4vmin;
 }
 
 #contact h3{
     font-family: 'ostrichBlack';
     padding: 12px;
     font-size: 4em;
+}
 
+#about p a{
+    color: #ff3366;
+}
+
+#about p a:hover{
+    color: #4a4a4c;
+    text-decoration: none;
 }
 
 #contactForm input {
     margin-bottom: 1%;
+    font-size: 5vmin;
+    height: 10vmin;
 }
+
+#contactForm textarea {
+    margin-bottom: 1%;
+    font-size: 5vmin;
+    height: 40vmin;
+}
+
+#createShortcut h1 {
+    background-color: #4a4a4c ;
+    color: white;
+    height: 100%;
+    padding: 2%;
+    font-family: "ostrichBlack";
+    font-size: 6vmin;
+    margin-top: 2%;
+    /*-webkit-padding-start: 0px;*/
+    /*border-bottom: 5px solid #4a4a4c;*/
+}
+
+#createShortcut li {
+    display: list-item;
+    list-style-type: square;
+    height: 100%;
+    padding: 12px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    font-size: 4vmin;
+    line-height: 4vmin;
+    margin: 0;
+    -webkit-padding-start: 0px;
+    border-bottom: 0;
+}
+
+/*#contactForm input::-webkit-input-placeholder {*/
+    /*color: red;*/
+/*}*/
 
 /*/////Store List*/
 
