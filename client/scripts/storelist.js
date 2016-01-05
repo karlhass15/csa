@@ -87,15 +87,15 @@ function appDom(array) {
         var mapsLink = query + lat + "," + long;
 
         $('#storeList').append( '<div class="container">' +
-            '<h5 class="action" data-list=" '+ i +' ">This individual</h5> '+
+
             '<div class="col-xs-4">' +
                 //'<img src="http://www.logoorange.com/thumb-portfolio/logo_thumbnail_military-design-logo.png" alt="store logo"/>'+
 
             '<img src=" ' + array[i].image + ' " />' +
-
             '</div>' +
             '<div class="col-xs-8">' +
-            '<h4><a href="store.html"><strong>'+ array[i].name +' </strong></a></h4></br><h5>' + miles+ ' miles</h5>' +
+            '<h1 class="action" data-list=" '+ i +' "><strong>'+ array[i].name +' </strong></h1>' +
+            '<h2>' + miles+ ' miles</h2>' +
             '<button><a href=" '+ mapsLink+ ' ">Directions</button>' +
             '</div>'+
             '</div>');

@@ -49,11 +49,13 @@ function appDom(store) {
 
         $('#storeContainer').append( '<div class="container">' +
             '<div class="col-xs-4">' +
-            '<img src="http://www.logoorange.com/thumb-portfolio/logo_thumbnail_military-design-logo.png" alt="store logo"/>'+
+            '<img src=" ' + store.image + ' " />' +
             '</div>' +
             '<div class="col-xs-8">' +
-            '<h4><strong></strong>'+ store.name +' </strong>' + miles+ ' miles</h4>' +
+            '<h1><strong></strong>'+ store.name +' </strong>' + miles+ ' miles</h1>' +
+            '<p>' + store.description + '</p>' +
             '<button><a href=" '+ mapsLink+ ' ">Directions</button>' +
+            '<button><a href=" '+ store.website + ' ">Website</button>' +
             '</div>'+
             '</div>');
 
