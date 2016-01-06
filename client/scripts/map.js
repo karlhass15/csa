@@ -141,12 +141,13 @@ var setContentstring = function(store, num){
     contentString =
         '<div class="container">' +
         '<div class="col-xs-12">' +
-            //'<img src="http://www.logoorange.com/thumb-portfolio/logo_thumbnail_military-design-logo.png" alt="store logo"/>'+
+        '<h4 class = "action" data-list=" '+ num +' "> '+store.name+'</h4>' +
+
+        '<img src="http://www.fillmurray.com/300/200" alt="store logo"/>'+
             // image tag below should work, color is webstorm error
-        '<img src=" ' + store.image + ' " />' +
+        //'<img src=" ' + store.image + ' " />' +
         '</div>' +
         '<div class="col-xs-12">' +
-        '<h4 class = "action" data-list=" '+ num +' "> '+store.name+'</h4>' +
         '<h5>' + store.description + '</h5></br>'+
         '<h6>' + miles + ' Miles</h6>' +
             //'<h5><a href=" '+var+' "></a>Website</h5>' + NEED TO SET UP DIRECTIONAL DATA

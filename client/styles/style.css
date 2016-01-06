@@ -647,6 +647,10 @@ li {
     height: 40vmin;
 }
 
+#contactForm button {
+    float: right;
+}
+
 #createShortcut h1 {
     background-color: #4a4a4c ;
     color: white;
