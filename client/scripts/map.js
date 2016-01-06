@@ -1,6 +1,9 @@
+//establishing variables
 var myLatLng = {};
 var storesFound = [];
 var storeContent = [];
+
+//document functionality
 $(document).ready(function(){
     displayLoading();
     $('body').css('overflow','hidden');
@@ -21,11 +24,10 @@ $(document).ready(function(){
                 }, 600);
             flag = 1;
         }
-        //return false;
     });
     getCurrentLocation();
 
-//listener
+//click listener
     $('body').on('click', '.action', function(){
         //clear storage every time the button is clicked
         localStorage.clear();
@@ -33,12 +35,11 @@ $(document).ready(function(){
         console.log($(this).data('list'));
         var arrayPosition = Number($(this).data('list'));
         console.log(storesFound[arrayPosition]);
-        ////set
         localStorage.setItem('kittyFoo', JSON.stringify(storesFound[arrayPosition]));
         window.location.href='store.html';
-
     });
 });
+
 //Function to find the store -- called within getCurrentLocation
 var findStore = function(){
     console.log("The location data being sent to the db as search criteria: ", myLatLng);
@@ -56,6 +57,7 @@ var findStore = function(){
         }
     });
 };
+
 //Geolocation function to get current location
 var getCurrentLocation = function() {
     myLatLng = {};
@@ -78,6 +80,7 @@ var getCurrentLocation = function() {
             'Error: Your browser doesn\'t support geolocation.');
     }
 };
+
 //Map initialization function -- called within findStore function
 var initMap = function(myLocation, storesFound){
     storeContent = [];
