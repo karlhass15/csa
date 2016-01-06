@@ -86,9 +86,9 @@ header {
 #homePageBG{
     position: fixed;
     display: inline-block;
-    background-image: url('/imageIcons/homePageBGLarge.png');
+    background-image: url('/imageIcons/HomePageBGLarge.png');
     background-repeat: no-repeat; /* for vertical repeat */
-    background-repeat: no-repeat; /* for horizontal repeat */
+    /*background-repeat: no-repeat; /!* for horizontal repeat *!/*/
     /*background-position: center;*/
     height: 100%;
     width: 100%;
