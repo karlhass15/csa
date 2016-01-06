@@ -640,8 +640,8 @@ li {
 
 #contact h3{
     font-family: 'ostrichBlack';
-    padding: 12px;
-    font-size: 3em;
+    /*padding: 12px;*/
+    font-size: 5vmax;
 }
 
 #about p a{
