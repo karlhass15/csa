@@ -894,6 +894,10 @@ button a:hover{
 
 /*////////!!!!!@MEDIA SECTION!!!!!!!\\\\\\\\\\\\*/
 /* fix iOS bug not displaying 100vh correctly */
+
+
+
+
 /* ipad */
 /*LANDSCAPE iPad mini AND regular */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
