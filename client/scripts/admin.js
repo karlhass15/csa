@@ -1,6 +1,5 @@
 
 var editStoreId;
-
 $(document).ready(function() {
 
 
@@ -133,9 +132,9 @@ function editStore() {
 }
 //
 var editRedirect = function(){
-    window.location.replace('/assets/views/ed1tst0re.html');
-};
 
+    window.location.replace('/assets/views/admin/ed1tst0re.html');
+};
 
 
 //
@@ -207,3 +206,7 @@ var editRedirect = function(){
 //        }
 //    });
 //}
+
+
+
+

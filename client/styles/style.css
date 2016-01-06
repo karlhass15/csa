@@ -9,11 +9,11 @@
 }
 
 /*html {*/
-    /*height: 100%;*/
+/*height: 100%;*/
 /*}*/
 
 /*body{*/
-    /*height: inherit;*/
+/*height: inherit;*/
 /*}*/
 
 
@@ -35,7 +35,7 @@ body {
 }
 
 /*#mapBody {*/
-    /*overflow: hidden;*/
+/*overflow: hidden;*/
 /*}*/
 
 
@@ -82,6 +82,8 @@ header {
 #grayBackground {
     background-color: #e0e0e0;
     width: 100%;
+    padding: 2%;
+    height: 100vmax;
     /*margin-top: 10px;*/
 }
 
@@ -245,6 +247,14 @@ li {
     border: 0;
     font-family: "ostrichBlack";
     height: 15%;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 0;
+    padding-top: 7px;
+    text-align: center;
 
 }
 
@@ -252,8 +262,8 @@ li {
     margin-bottom: 0;
 }
 /*.nav-tabs>li.active>a{*/
-    /*background-color: #ff3366;*/
-    /*color: white;*/
+/*background-color: #ff3366;*/
+/*color: white;*/
 /*}*/
 
 #icon {
@@ -265,11 +275,11 @@ li {
 }
 
 /*#informationList{*/
-    /*height: 10%;*/
+/*height: 10%;*/
 /*}*/
 
 /*#informationTab{*/
-    /*height: 10%;*/
+/*height: 10%;*/
 /*}*/
 
 
@@ -297,7 +307,7 @@ li {
     position: relative;
     /*bottom: 0;*/
     z-index: 1;
-    bottom: 50px;
+    bottom: 100px;
     margin-bottom: -50px;
     /*background-color: #4a4a4c;*/
     /*height: 100px;*/
@@ -314,11 +324,16 @@ li {
     font-family: 'ostrichBlack';
     text-align: center;
     vertical-align: middle;
-    height: 50px;
-    width:50px;
+    height: 100px;
+    width:100px;
     padding-top: 15px;
     border-radius: 20% 20% 0 0;
     z-index: 1;
+}
+
+#popupButton{
+    font-size: 25pt;
+    margin-top: 15%;
 }
 
 #tabLinks{
@@ -587,23 +602,67 @@ li {
 }
 
 #grayBackground p {
-    height: 100%;
-    padding: 12px;
-    font-family: 'ostrich';
-    font-size: 2em;
-    line-height: 24pt;
+    /*padding: 12px;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 4vmin;
+    line-height: 6vmin;
 }
 
 #contact h3{
     font-family: 'ostrichBlack';
     padding: 12px;
-    font-size: 4em;
+    font-size: 3em;
+}
 
+#about p a{
+    color: #ff3366;
+}
+
+#about p a:hover{
+    color: #4a4a4c;
+    text-decoration: none;
 }
 
 #contactForm input {
     margin-bottom: 1%;
+    font-size: 5vmin;
+    height: 10vmin;
 }
+
+#contactForm textarea {
+    margin-bottom: 1%;
+    font-size: 5vmin;
+    height: 40vmin;
+}
+
+#createShortcut h1 {
+    background-color: #4a4a4c ;
+    color: white;
+    height: 100%;
+    padding: 2%;
+    font-family: "ostrichBlack";
+    font-size: 6vmin;
+    margin-top: 2%;
+    /*-webkit-padding-start: 0px;*/
+    /*border-bottom: 5px solid #4a4a4c;*/
+}
+
+#createShortcut li {
+    display: list-item;
+    list-style-type: square;
+    height: 100%;
+    padding: 12px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    font-size: 4vmin;
+    line-height: 4vmin;
+    margin: 0;
+    -webkit-padding-start: 0px;
+    border-bottom: 0;
+}
+
+/*#contactForm input::-webkit-input-placeholder {*/
+/*color: red;*/
+/*}*/
 
 /*/////Store List*/
 
@@ -635,14 +694,14 @@ li {
 }
 
 #storeList h5 {
-     font-family: 'ostrich';
-     display: inline;
-     font-size: 3vmax;
-     color: #4a4a4c;
-     padding-left: 3px;
-     line-height: 7vmax;
+    font-family: 'ostrich';
+    display: inline;
+    font-size: 3vmax;
+    color: #4a4a4c;
+    padding-left: 3px;
+    line-height: 7vmax;
 
- }
+}
 
 #storeList h4 a {
     color: #4a4a4c;
@@ -657,24 +716,25 @@ li {
 button {
     font-family: 'ostrichBlack';
     color: #e1e34c;
-    font-size: 2.5vmax;
+    font-size: 3.5vmax;
     vertical-align: middle;
     display: inline;
     margin-left: 3%;
-    /*margin-top: 3vmin;*/
+    /* margin-top: 3vmin; */
     background-color: #4a4a4c;
     border-radius: 5px;
     border: 0;
-    height: 3vmax;
-    /*padding-top: 5px;*/
+    height: 6vmax;
+    width: 12vmax;
+    /* padding-top: 5px; */
 }
 
 button a {
-     font-family: 'ostrichBlack';
-     color: #e1e34c;
+    font-family: 'ostrichBlack';
+    color: #e1e34c;
     font-size: 2.5vmax;
-    vertical-align: middle;
- }
+    /*vertical-align: middle;*/
+}
 
 button a:hover{
     color: white;
@@ -763,4 +823,106 @@ button a:hover{
 
 .addstoreButton{
     margin-left: 0;
+}
+
+
+/* fix iOS bug not displaying 100vh correctly */
+/* ipad */
+/*LANDSCAPE iPad mini AND regular */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    #pageContainer {
+        height: 768px;
+    }
+    #homeCategory {
+        width: 28vmin;
+        height:32vmin;
+        /*margin: 3vmin;*/
+        margin-left: 4vmin;
+    }
+
+    #homeStore {
+        width: 28vmin;
+        height:32vmin;
+        /*margin: 3vmin;*/
+        margin-left: 2vmin;
+    }
+
+    #homeMap {
+        width: 28vmin;
+        height:32vmin;
+        /*margin: 3vmin;*/
+        margin-left: 2vmin;
+    }
+
+    #homeInformation {
+        width: 28vmin;
+        height:32vmin;
+        /*margin: 3vmin;*/
+        margin-left: 2vmin;
+    }
+}
+/*PORTRAIT iPad mini AND regular */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+
+    #pageContainer {
+        height: 1024px;
+    }
+    #homeCategory {
+        width: 37vmin;
+        height:41vmin;
+        margin-top: 2vmin;
+        margin-bottom: 3vmin;
+        margin-right: 2vmin;
+        margin-left: 11vmin;
+    }
+
+    #homeStore {
+        width: 37vmin;
+        height:41vmin;
+        margin-right: 2vmin;
+        margin-left: 11vmin;
+    }
+
+    #homeMap {
+        width: 37vmin;
+        height:41vmin;
+        margin-top: 2vmin;
+        margin-bottom: 3vmin;
+        margin-left: 2vmin;
+    }
+
+    #homeInformation {
+        width: 37vmin;
+        height:41vmin;
+        margin-left: 2vmin;
+    }
+
+}
+/* iphone5 */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2) {
+
+    #pageContainer {
+        height: 320px;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2) {
+
+    #pageContainer {
+        height: 568px;
+    }
+}
+/* iPhone 4 */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+
+    #pageContainer {
+        height: 320px;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+
+    #pageContainer {
+        height: 480px;
+    }
 }
