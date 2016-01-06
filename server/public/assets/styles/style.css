@@ -640,13 +640,10 @@ li {
 
 #contact h3{
     font-family: 'ostrichBlack';
-<<<<<<< HEAD
+
     padding: 12px;
     font-size: 3em;
-=======
-    /*padding: 12px;*/
-    font-size: 5vmax;
->>>>>>> 1a3adc355d89da011137601169876846810e572d
+
 }
 
 #about p a{
@@ -662,15 +659,8 @@ li {
     margin-bottom: 1%;
     font-size: 5vmin;
     height: 10vmin;
-<<<<<<< HEAD
 }
 
-#contactForm textarea {
-    margin-bottom: 1%;
-    font-size: 5vmin;
-    height: 40vmin;
-=======
-}
 
 #contactForm textarea {
     margin-bottom: 1%;
@@ -681,7 +671,6 @@ li {
 #contactForm button {
     float: right;
     margin-top: 2.5vmax;
->>>>>>> 1a3adc355d89da011137601169876846810e572d
 }
 
 #createShortcut h1 {
@@ -788,11 +777,9 @@ li {
     vertical-align: middle;
     display: inline;
     margin-left: 3%;
-<<<<<<< HEAD
     /* margin-top: 3vmin; */
-=======
+
     margin-top: -3%;
->>>>>>> 1a3adc355d89da011137601169876846810e572d
     background-color: #4a4a4c;
     border-radius: 5px;
     border: 0;
@@ -896,10 +883,16 @@ button a:hover{
 
 .addstoreButton{
     margin-left: 0;
-<<<<<<< HEAD
+
 }
 
 
+
+
+
+
+
+/*////////!!!!!@MEDIA SECTION!!!!!!!\\\\\\\\\\\\*/
 /* fix iOS bug not displaying 100vh correctly */
 /* ipad */
 /*LANDSCAPE iPad mini AND regular */
@@ -999,8 +992,5 @@ button a:hover{
     #pageContainer {
         height: 480px;
     }
-=======
-    font-size: 2.5vmax;
-    margin-top: 2vmax;
->>>>>>> 1a3adc355d89da011137601169876846810e572d
+
 }
