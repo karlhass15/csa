@@ -247,6 +247,14 @@ li {
     border: 0;
     font-family: "ostrichBlack";
     height: 15%;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 0;
+    padding-top: 7px;
+    text-align: center;
 
 }
 
@@ -597,13 +605,13 @@ li {
     /*padding: 12px;*/
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 4vmin;
-    line-height: 4vmin;
+    line-height: 6vmin;
 }
 
 #contact h3{
     font-family: 'ostrichBlack';
     padding: 12px;
-    font-size: 4em;
+    font-size: 3em;
 }
 
 #about p a{
@@ -708,23 +716,24 @@ li {
 button {
     font-family: 'ostrichBlack';
     color: #e1e34c;
-    font-size: 2.5vmax;
+    font-size: 3.5vmax;
     vertical-align: middle;
     display: inline;
     margin-left: 3%;
-    /*margin-top: 3vmin;*/
+    /* margin-top: 3vmin; */
     background-color: #4a4a4c;
     border-radius: 5px;
     border: 0;
-    height: 3vmax;
-    /*padding-top: 5px;*/
+    height: 6vmax;
+    width: 12vmax;
+    /* padding-top: 5px; */
 }
 
 button a {
      font-family: 'ostrichBlack';
      color: #e1e34c;
     font-size: 2.5vmax;
-    vertical-align: middle;
+    /*vertical-align: middle;*/
  }
 
 button a:hover{
