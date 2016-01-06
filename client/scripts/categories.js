@@ -1,6 +1,8 @@
 var parameters = {};
 
 $(document).ready(function(){
+
+    displayLoading();
     getCurrentLocation();
 
     $('#categoriesList').on('click', '.category', function(){
@@ -51,6 +53,7 @@ var getCurrentLocation = function() {
         navigator.geolocation.getCurrentPosition(function (position) {
             parameters.lat = parseFloat(position.coords.latitude);
             parameters.lng = parseFloat(position.coords.longitude);
+            displayCompleted();
         });
     } else {
         //Geolocation isn't supported by the browser
@@ -64,3 +67,13 @@ var getCurrentLocation = function() {
             'Error: Your browser doesn\'t support geolocation.');
     }
 };
+
+function displayLoading(){
+    $('#categoriesList').hide();
+    $('#spin').addClass('spinner');
+}
+
+function displayCompleted(){
+    $('#spin').removeClass('spinner');
+    $('#categoriesList').show();
+}

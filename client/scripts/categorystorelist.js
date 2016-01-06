@@ -1,15 +1,15 @@
 var storeIdArray;
 var test;
+var myLatLng;
 
 $(document).ready(function(){
 
     displayLoading();
+    getCurrentLocation();
 
     test = sessionStorage.getItem('store_ids');
     storeIdArray = test.split(',');
     console.log("The storeIdArray: ", storeIdArray);
-
-    getStores();
 
 });
 
@@ -24,6 +24,31 @@ var getStores = function(){
                 displayCompleted();
             }
     });
+};
+
+//Geolocation function to get current location
+var getCurrentLocation = function() {
+    myLatLng = {};
+
+    //Geolocation to get the current location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            myLatLng.lat = parseFloat(position.coords.latitude);
+            myLatLng.lng = parseFloat(position.coords.longitude);
+            getStores();
+        });
+    } else {
+        //Geolocation isn't supported by the browser
+        handleLocationError(false, infoWindow, map.getCenter());
+    }
+
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: The Geolocation service failed.' :
+            'Error: Your browser doesn\'t support geolocation.');
+    }
 };
 
 function appDom(array) {
