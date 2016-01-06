@@ -30,7 +30,7 @@ body {
 }
 
 button {
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: #e1e34c;
     font-size: 3.5vmax;
     vertical-align: middle;
@@ -57,7 +57,7 @@ button {
 
 header {
     background-color: #cccc00;
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: white;
     font-size: 13vh;
     padding-left: 3%;
@@ -70,7 +70,7 @@ header {
 
 #homePageHeader {
     background-color: #cccc00;
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: white;
     text-align: center;
     font-size: 12vmax;
@@ -86,9 +86,9 @@ header {
 #homePageBG{
     position: fixed;
     display: inline-block;
-    background-image: url('/imageIcons/homePageBGLarge.png');
+    background-image: url('/imageIcons/HomePageBGLarge.png');
     background-repeat: no-repeat; /* for vertical repeat */
-    background-repeat: no-repeat; /* for horizontal repeat */
+    /*background-repeat: no-repeat; /!* for horizontal repeat *!/*/
     /*background-position: center;*/
     height: 100%;
     width: 100%;
@@ -105,13 +105,13 @@ header {
 
 input{
     width: 100%;
-    height: 20px;
+    /*height: 20px;*/
     border: 0;
     height: 5vh;
 }
 
 label{
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     margin-top: 5px;
     font-size: 4vmax;
     line-height: 4vmax;
@@ -150,7 +150,7 @@ textarea {
 
 li {
     display: block;
-    font-family: 'ostrich';
+    font-family: 'ostrich', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     font-size: 10pt;
     line-height: 12pt;
     margin: 0;
@@ -174,7 +174,7 @@ li {
 
 
 .appendDomHeader {
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     font-weight: bold;
     margin-top: 20px;
     font-size: 12pt;
@@ -184,7 +184,7 @@ li {
 }
 
 .appendDom {
-    font-family: 'ostrich';
+    font-family: 'ostrich', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     /*font-weight: bold;*/
     /*margin-top: 20px;*/
     font-size: 10pt;
@@ -200,7 +200,7 @@ li {
 
 #goods li {
     display: block;
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack',"Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     font-size: 6vmin;
     line-height: 8vmin;
     margin: 0;
@@ -217,7 +217,7 @@ li {
 
 #ethicalStandard li {
     display: block;
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     font-size: 6vmin;
     line-height: 8vmin;
     margin: 0;
@@ -244,7 +244,7 @@ li {
 .nav-tabs > li.active > a:focus{
     color: white;
     background-color: #ff3366;
-    font-family: "ostrichBlack";
+    font-family: "ostrichBlack", "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     border: 0;
     height: 15%;
     margin: 0;
@@ -263,7 +263,7 @@ li {
     background-color: #cccccc;
     color: white;
     border: 0;
-    font-family: "ostrichBlack";
+    font-family: "ostrichBlack", "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     height: 15%;
 }
 
@@ -339,7 +339,7 @@ li {
     /*margin-bottom: -1%;*/
     background-color: #4a4a4c;
     color: white;
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     text-align: center;
     vertical-align: middle;
     height: 100px;
@@ -463,7 +463,7 @@ li {
     display: inline-block;
     width: 100%;
     height: 100%;
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -499,7 +499,7 @@ li {
     display: inline-block;
     width: 100%;
     height: 100%;
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -533,7 +533,7 @@ li {
     display: inline-block;
     width: 100%;
     height: 100%;
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -568,7 +568,7 @@ li {
     display: inline-block;
     width: 100%;
     height: 100%;
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -582,7 +582,7 @@ li {
 /*/////////////On Map Popup/////////////*/
 
 #mapContainer h4 {
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     /*background-color: #4a4a4c;*/
     color: #e1e34c;
     padding-left: 3px;
@@ -604,7 +604,7 @@ li {
 
 #mapContainer h6 {
     display: inline;
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     /*background-color: #4a4a4c;*/
     color: #e1e34c;
     padding-left: 3px;
@@ -639,9 +639,17 @@ li {
 }
 
 #contact h3{
+<<<<<<< HEAD
     font-family: 'ostrichBlack';
     /*padding: 12px;*/
     font-size: 5vmax;
+=======
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+
+    padding: 12px;
+    font-size: 3em;
+
+>>>>>>> master
 }
 
 #about p a{
@@ -675,7 +683,7 @@ li {
     color: white;
     height: 100%;
     padding: 2%;
-    font-family: "ostrichBlack";
+    font-family: "ostrichBlack", "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     font-size: 6vmin;
     margin-top: 2%;
     /*-webkit-padding-start: 0px;*/
@@ -734,7 +742,7 @@ li {
 }
 
 #storeList h4 {
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     /*background-color: #4a4a4c;*/
     /*color: #e1e34c;*/
     color: #4a4a4c;
@@ -747,7 +755,7 @@ li {
 }
 
 #storeList h5 {
-    font-family: 'ostrich';
+    font-family: 'ostrich', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     display: inline;
     font-size: 3vmax;
     color: #4a4a4c;
@@ -769,7 +777,7 @@ li {
 
 
 #mapContainer button {
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: #e1e34c;
     font-size: 3.5vmax;
     vertical-align: middle;
@@ -786,7 +794,7 @@ li {
 
 
 button a {
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: #e1e34c;
     font-size: 2.5vmax;
     /*vertical-align: middle;*/
@@ -800,7 +808,7 @@ button a:hover{
 /*Individual store page*/
 
 #storeContainer h1{
-    font-family: 'ostrichBlack';
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: #4a4a4c;
     font-size: 7vmax;
     margin: 5% 0 0 0;
@@ -808,7 +816,7 @@ button a:hover{
 }
 
 #storeContainer h2{
-    font-family: 'ostrich';
+    font-family: 'ostrich', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: #4a4a4c;
     font-size: 5.5vmax;
     margin: 0;
