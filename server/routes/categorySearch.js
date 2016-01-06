@@ -2,10 +2,6 @@ var express = require('express');
 var router = express.Router();
 var Store = require('../models/store');
 
-//router.get('/', function (req, res){
-//    console.log("We've received a category search request!");
-//    res.send("Success");
-//});
 
 router.get('/', function(req, res){
     console.log("Here is the req.query: ", req.query);
@@ -15,14 +11,9 @@ router.get('/', function(req, res){
             if (err) {
                 console.log("Error in the query!: ", err);
             }
+            console.log("Here is the data to be returned: ", data);
             res.send(data);
         })
 });
 
 module.exports = router;
-
-//Store.find({$geoSearch : "stores", near: [parseFloat(req.query.lng), parseFloat(req.query.lat)], maxDistance: 20,
-//    search: {categories: {$elemMatch : {category: req.query.category}}, limit: 5}},
-
-//{categories: {$elemMatch: {category : req.query.category}}}
-//{$and: [{address: "3736 17th Ave S, Minneapolis, MN 55407"}, {categories: {$elemMatch: {category : "Eco-Friendly"}}}]}

@@ -68,15 +68,12 @@ var getCurrentLocation = function() {
             'Error: The Geolocation service failed.' :
             'Error: Your browser doesn\'t support geolocation.');
     }
-}
+};
 
 
 
 
 function appDom(array) {
-
-
-
 
     for (var i = 0; i < array.length; i++) {
 

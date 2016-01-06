@@ -1,15 +1,15 @@
 
+
 var editStoreId;
+
 $(document).ready(function() {
 
-
-        //updateDOM(data);
+        //Store search for all data will occur on simple keystroke of 'enter'
         $('#storeSearchEdit').keypress(function (event) {
             enabledEnter();
-            console.log("someone hit enter key");
-
         });
 
+        //Click listeners for each button that appears along with each resulting store. One to delete, other to edit
         $("#storeContainer").on('click', '.delete', deleteStore);
         $("#storeContainer").on('click', '.edit', editStore);
 
@@ -25,7 +25,6 @@ $(document).ready(function() {
 
              //serialize array didn't work with keypress.  went with .val and manual object for ajax data:
              var search = $('#storeAdminSearch').val();
-             console.log("This is the value: ", search);
 
              $('#storeSearchEdit').find("input[type=text]").val("");
 
@@ -36,8 +35,6 @@ $(document).ready(function() {
                  data: {"venue" : search},
                  success: function (data) {
                      updateDOM(data);
-                     console.log("ajax went to getstores");
-                     console.log("value of search", search);
                  }
              });
          }
@@ -111,27 +108,28 @@ $(document).ready(function() {
 
 
 function editStore() {
-    editStoreId = {"id": $(this).data("id")};
-        //{"name": $(this).data("name")}];
+    //establish the id as a variable for search
+    var editStoreId = {"id": $(this).data("id")};
 
-    console.log(editStoreId);
-
+    //ajax call to get all pertinent data for the store
     $.ajax({
         type: "post",
         url: "/editstore",
         data: editStoreId,
         success: function (data) {
-            //window.location.replace('/assets/views/add00store.html');
-            console.log("Here is the /editstore data", data);
-            console.log(editStoreId);
+            //setting the returned data to a variable for local storage
             editStoreId = data;
+            //storing the store data in local storage for accessing after redirect
             localStorage.setItem('editInfo', JSON.stringify(editStoreId));
+            //redirect function call
             editRedirect();
         }
     });
 }
-//
+
+//redirect function to edit store page
 var editRedirect = function(){
+
 
     window.location.replace('/assets/views/admin/ed1tst0re.html');
 };
