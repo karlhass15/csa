@@ -148,7 +148,7 @@ var setContentstring = function(store, num){
         '<div class="col-xs-12">' +
         '<h4 class = "action" data-list=" '+ num +' "> '+store.name+'</h4>' +
         '<h5>' + store.description + '</h5></br>'+
-        '<h5><strong>' + miles + ' Miles</strong></h5>' +
+        '<h6>' + miles + ' Miles</h6>' +
             //'<h5><a href=" '+var+' "></a>Website</h5>' + NEED TO SET UP DIRECTIONAL DATA
         '<button><a href=" '+mapsLink+' ">Directions</a></button>' +
         '</div>'+

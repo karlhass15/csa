@@ -9,11 +9,11 @@
 }
 
 /*html {*/
-    /*height: 100%;*/
+/*height: 100%;*/
 /*}*/
 
 /*body{*/
-    /*height: inherit;*/
+/*height: inherit;*/
 /*}*/
 
 
@@ -35,7 +35,7 @@ body {
 }
 
 /*#mapBody {*/
-    /*overflow: hidden;*/
+/*overflow: hidden;*/
 /*}*/
 
 
@@ -262,8 +262,8 @@ li {
     margin-bottom: 0;
 }
 /*.nav-tabs>li.active>a{*/
-    /*background-color: #ff3366;*/
-    /*color: white;*/
+/*background-color: #ff3366;*/
+/*color: white;*/
 /*}*/
 
 #icon {
@@ -275,11 +275,11 @@ li {
 }
 
 /*#informationList{*/
-    /*height: 10%;*/
+/*height: 10%;*/
 /*}*/
 
 /*#informationTab{*/
-    /*height: 10%;*/
+/*height: 10%;*/
 /*}*/
 
 
@@ -569,18 +569,30 @@ li {
     color: #e1e34c;
     padding-left: 3px;
     padding-top: 2px;
-    font-size: 5em;
+    font-size: 7vmax;
 
 }
 
 #mapContainer h5 {
     display: inline;
-    font-family: 'ostrich';
-    font-size: 3em;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    font-size: 3vmax;
     color: #4a4a4c;
     padding-left: 3px;
     padding-top: 2px;
-    line-height: 22pt;
+    line-height: 3.5vmax;
+
+}
+
+#mapContainer h6 {
+    display: inline;
+    font-family: 'ostrichBlack';
+    /*background-color: #4a4a4c;*/
+    color: #e1e34c;
+    padding-left: 3px;
+    padding-top: 2px;
+    font-size: 5vmax;
+    line-height: 8vmax;
 
 }
 
@@ -661,7 +673,7 @@ li {
 }
 
 /*#contactForm input::-webkit-input-placeholder {*/
-    /*color: red;*/
+/*color: red;*/
 /*}*/
 
 /*/////Store List*/
@@ -694,14 +706,14 @@ li {
 }
 
 #storeList h5 {
-     font-family: 'ostrich';
-     display: inline;
-     font-size: 3vmax;
-     color: #4a4a4c;
-     padding-left: 3px;
-     line-height: 7vmax;
+    font-family: 'ostrich';
+    display: inline;
+    font-size: 3vmax;
+    color: #4a4a4c;
+    padding-left: 3px;
+    line-height: 7vmax;
 
- }
+}
 
 #storeList h4 a {
     color: #4a4a4c;
@@ -729,12 +741,29 @@ button {
     /* padding-top: 5px; */
 }
 
+#mapContainer button {
+    font-family: 'ostrichBlack';
+    color: #e1e34c;
+    font-size: 3.5vmax;
+    vertical-align: middle;
+    display: inline;
+    margin-left: 3%;
+    margin-top: -3%;
+    background-color: #4a4a4c;
+    border-radius: 5px;
+    border: 0;
+    height: 6vmax;
+    width: 12vmax;
+    /* padding-top: 5px; */
+}
+
+
 button a {
-     font-family: 'ostrichBlack';
-     color: #e1e34c;
+    font-family: 'ostrichBlack';
+    color: #e1e34c;
     font-size: 2.5vmax;
     /*vertical-align: middle;*/
- }
+}
 
 button a:hover{
     color: white;
@@ -823,4 +852,5 @@ button a:hover{
 
 .addstoreButton{
     margin-left: 0;
+    font-size: 2.5vmax;
 }
