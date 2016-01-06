@@ -7,23 +7,12 @@ $(document).ready(function(){
     displayLoading();
     getCurrentLocation();
 
-    test = sessionStorage.getItem('store_ids');
-    storeIdArray = test.split(',');
-    console.log("The storeIdArray: ", storeIdArray);
 
 });
 
-var getStores = function(){
-        $.ajax({
-            method: 'GET',
-            url: '/categorylist',
-            data: {"paramArray": storeIdArray},
-            success: function(data){
-                console.log("The response data: ", data);
-                appDom(data);
-                displayCompleted();
-            }
-    });
+var retrieveStores = function(){
+    storeIdArray = localStorage.getItem('catStore');
+    storeIdArray = JSON.parse(storeIdArray);
 };
 
 //Geolocation function to get current location
@@ -35,7 +24,9 @@ var getCurrentLocation = function() {
         navigator.geolocation.getCurrentPosition(function (position) {
             myLatLng.lat = parseFloat(position.coords.latitude);
             myLatLng.lng = parseFloat(position.coords.longitude);
-            getStores();
+            retrieveStores();
+            appDom(storeIdArray);
+            displayCompleted();
         });
     } else {
         //Geolocation isn't supported by the browser
@@ -54,7 +45,6 @@ var getCurrentLocation = function() {
 function appDom(array) {
 
     for (var i = 0; i < array.length; i++) {
-
         var miles = (array[i].distance * 3963.2).toFixed(1);
         var query = "https://www.google.com/maps/dir/Current+Location/";
         var lat = array[i].latlong[0];

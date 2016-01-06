@@ -30,7 +30,6 @@ var populateFields = function() {
 
 //function to take form data and prep for db query
 var addStore = function() {
-    console.log("Click!");
     event.preventDefault();
 
     storeInfo = {};

@@ -19,7 +19,6 @@ $(document).ready(function() {
 
 
 var addStore = function() {
-    console.log("Click!");
     event.preventDefault();
 
     storeInfo = {};

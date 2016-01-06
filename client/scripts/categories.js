@@ -27,7 +27,6 @@ var categorySearch = function(){
 
             } else {
                 storeLocalData(data);
-
             }
         }
     });
@@ -35,12 +34,15 @@ var categorySearch = function(){
 
 var storeLocalData = function(data){
     //local storage
-    var sessionString = data[0]._id;
-  for (var i=1; i<data.length; i++){
-      sessionString += "," + data[i]._id;
-  }
-    sessionStorage.setItem('store_ids', sessionString);
-    var test = sessionStorage.getItem('store_ids');
+  //  var sessionString = data[0]._id;
+  //for (var i=1; i<data.length; i++){
+  //    sessionString += "," + data[i]._id;
+  //}
+    console.log("What is the data that we're going to store?: ", data);
+    localStorage.setItem('catStore', JSON.stringify(data));
+    var test = localStorage.getItem('catStore');
+    console.log("What is it pulling back out?: ", test);
+    //sessionStorage.setItem('store_ids', sessionString);
     window.location.replace('/assets/views/categorystorelist.html');
 };
 
