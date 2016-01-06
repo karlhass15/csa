@@ -29,6 +29,22 @@ body {
     margin-bottom: 100px;
 }
 
+button {
+    font-family: 'ostrichBlack';
+    color: #e1e34c;
+    font-size: 3.5vmax;
+    vertical-align: middle;
+    display: inline;
+    margin-left: 3%;
+    margin-top: -3%;
+    background-color: #4a4a4c;
+    border-radius: 5px;
+    border: 0;
+    height: 6vmax;
+    width: 12vmax;
+    /* padding-top: 5px; */
+}
+
 #mapContainer{
     height: 80vh;
     overflow: hidden;
@@ -148,10 +164,12 @@ li {
     background-color: #4a4a4c;
     color: #e1e34c;
     border: 0;
+    margin-top: 2.5vmax;
 }
 
 .container {
     width: 100%;
+    padding: 0;
 }
 
 
@@ -649,6 +667,7 @@ li {
 
 #contactForm button {
     float: right;
+    margin-top: 2.5vmax;
 }
 
 #createShortcut h1 {
@@ -696,6 +715,23 @@ li {
     max-height: 17vh;
 }
 
+#storeList h1 {
+    margin: 0;
+    font-size: 5vmax;
+
+}
+
+#storeList h2 {
+    display: inline;
+    color: #4a4a4c;
+
+    padding-left: 3px;
+    font-size: 5vmax;
+    margin-bottom: -2vmax;
+    margin-top: 5px;
+    line-height: 4vmax;
+}
+
 #storeList h4 {
     font-family: 'ostrichBlack';
     /*background-color: #4a4a4c;*/
@@ -729,21 +765,7 @@ li {
     text-decoration: none;
 }
 
-button {
-    font-family: 'ostrichBlack';
-    color: #e1e34c;
-    font-size: 3.5vmax;
-    vertical-align: middle;
-    display: inline;
-    margin-left: 3%;
-    /* margin-top: 3vmin; */
-    background-color: #4a4a4c;
-    border-radius: 5px;
-    border: 0;
-    height: 6vmax;
-    width: 12vmax;
-    /* padding-top: 5px; */
-}
+
 
 #mapContainer button {
     font-family: 'ostrichBlack';
@@ -857,4 +879,5 @@ button a:hover{
 .addstoreButton{
     margin-left: 0;
     font-size: 2.5vmax;
+    margin-top: 2vmax;
 }
