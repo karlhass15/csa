@@ -15,18 +15,18 @@ router.get("/*", function (req, res) {
 
     //additional security for url in client side
     // if url contains '/admin/'
-    if (req.params[0] && req.params[0].split('/admin/').length > 1){
-        if(req.user){
-            // user is logged in, so they can have the file
-            res.sendFile(path.join(__dirname, "..//public", file));
-        } else {
-            // status code for not authorized
-            res.send(401);
-        }
-
-    } else {
+    //if (req.params[0] && req.params[0].split('/admin/').length > 1){
+    //    if(req.user){
+    //        // user is logged in, so they can have the file
+    //        res.sendFile(path.join(__dirname, "..//public", file));
+    //    } else {
+    //        // status code for not authorized
+    //        res.send(401);
+    //    }
+    //
+    //} else {
         res.sendFile(path.join(__dirname, "..//public", file));
-    }
+    //}
 });
 
 
