@@ -1,3 +1,7 @@
+
+
+var editStoreId;
+
 $(document).ready(function() {
 
         //Store search for all data will occur on simple keystroke of 'enter'
@@ -125,5 +129,82 @@ function editStore() {
 
 //redirect function to edit store page
 var editRedirect = function(){
-    window.location.replace('/assets/views/ed1tst0re.html');
+
+
+    window.location.replace('/assets/views/admin/ed1tst0re.html');
 };
+
+
+//
+//
+//function populateFields(editStoreId) {
+//
+//    $.ajax({
+//        method: 'GET',
+//        url: '/getstoreforedit',
+//        data: editStoreId,
+//
+//        //data: {"_id": editStoreId},
+//        success: function (data) {
+//            console.log("The response data: ", data);
+//        }
+//    });
+//}
+//
+//populateFields(editStoreId);
+
+
+    //
+    //function findStore(data) {
+    //    $('#storeAdminSearch').keypress(function (e) {
+    //        if (e.which == 13) {
+    //            var el = "<div class='well col-md-3'>" +
+    //                "<p>" + data[i].name + "</p>" +
+    //                "<button class='btn btn-danger delete' data-id='" + data[i].id + "'>Delete</button>" +
+    //                "button class='btn btn-primary edit' data-id='" + data[i].id + "'>Edit</button>" +
+    //                "</div>";
+    //            $('storeContainer').append(el);
+    //        }
+    //    });
+    //}                                                                                                          ////Function to find the store -- called within getCurrentLocation
+//var findStore = function(){
+//    console.log("The location data being sent to the db as search criteria: ", myLatLng);
+//    $.ajax({
+//        type: "GET",
+//        url: "/addStore",
+//        data: myLatLng,
+//        success: function(data){
+//            console.log("The data response from the db: ", data);
+//            storesFound = data;
+//            console.log("The storesFound: ", storesFound);
+//            initMap(myLatLng, storesFound);
+//            return storesFound;
+//        }
+//    });
+//};
+
+//search store database
+//function findStore() {
+//    event.preventDefault();
+//    var stores = {};
+//
+//    $.each($(this).serializeArray(), function (i, field) {
+//        stores[field.name] = field.value;
+//    });
+//
+////clears the search input after enter
+//    $('#storeSearchAdd').find("input[type=text]").val("");
+//
+//    $.ajax({
+//        type: "GET",
+//        url: "/data",
+//        data: stores,
+//        success: function (data) {
+//            getStores();
+//        }
+//    });
+//}
+
+
+
+
