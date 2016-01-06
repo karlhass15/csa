@@ -75,9 +75,6 @@ var getCurrentLocation = function() {
 
 function appDom(array) {
 
-
-
-
     for (var i = 0; i < array.length; i++) {
 
         var miles = (array[i].distance * 3963.2).toFixed(1);

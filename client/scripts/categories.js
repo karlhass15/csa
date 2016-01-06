@@ -2,12 +2,11 @@ var parameters = {};
 
 $(document).ready(function(){
     getCurrentLocation();
+
     $('#categoriesList').on('click', '.category', function(){
         var testValue = $(this).text();
-        console.log("This is the testValue: ", testValue);
         parameters.category = testValue;
         categorySearch();
-
     });
 
 
@@ -16,16 +15,19 @@ $(document).ready(function(){
 
 //Function list
 var categorySearch = function(){
-    console.log("Category search parameters: ", parameters);
     $.ajax({
         method: "GET",
         url: "/categorysearch",
         data: parameters,
-        success: function(data){
-            console.log("This is the data: ", data);
-            //Local storage test
-            storeLocalData(data);
+        success: function(data) {
+            if (data.length < 1) {
+                alert("There are no stores nearby that match your category criteria.");
+
+            } else {
+                storeLocalData(data);
+
             }
+        }
     });
 };
 
@@ -37,8 +39,6 @@ var storeLocalData = function(data){
   }
     sessionStorage.setItem('store_ids', sessionString);
     var test = sessionStorage.getItem('store_ids');
-
-    console.log("Test of the local storage: ", test);
     window.location.replace('/assets/views/categorystorelist.html');
 };
 
@@ -51,7 +51,6 @@ var getCurrentLocation = function() {
         navigator.geolocation.getCurrentPosition(function (position) {
             parameters.lat = parseFloat(position.coords.latitude);
             parameters.lng = parseFloat(position.coords.longitude);
-            console.log("The variable parameters: ", parameters);
         });
     } else {
         //Geolocation isn't supported by the browser
