@@ -582,13 +582,16 @@ li {
 /*/////////////On Map Popup/////////////*/
 
 #mapContainer h4 {
-    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
-    /*background-color: #4a4a4c;*/
-    color: #e1e34c;
-    padding-left: 3px;
-    padding-top: 2px;
-    font-size: 7vmax;
+     font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+     /*background-color: #4a4a4c;*/
+     color: #e1e34c;
+     padding-left: 3px;
+     padding-top: 2px;
+     font-size: 7vmax;
+ }
 
+#mapContainer h4:hover {
+    color: #4a4a4c;
 }
 
 #mapContainer h5 {
@@ -813,6 +816,14 @@ button a:hover{
 
 }
 
+#storeContainer p{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #4a4a4c;
+    font-size: 3vmax;
+    /*margin: 5% 0 0 0;*/
+
+}
+
 #storeContainer h2{
     font-family: 'ostrich', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: #4a4a4c;
@@ -822,6 +833,7 @@ button a:hover{
 
 #storeContainer img{
     width: 100%;
+    margin-top: 5%;
 }
 
 #storeContainer button{

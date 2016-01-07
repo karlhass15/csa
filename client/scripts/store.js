@@ -52,7 +52,8 @@ function appDom(store) {
             '<img src=" ' + store.image + ' " />' +
             '</div>' +
             '<div class="col-xs-8">' +
-            '<h1><strong></strong>'+ store.name +' </strong>' + miles+ ' miles</h1>' +
+            '<h1>'+ store.name + '</h1>' +
+            '<h2>'+ miles + ' miles</h2>' +
             '<p>' + store.description + '</p>' +
             '<button><a href=" '+ mapsLink+ ' ">Directions</button>' +
             '<button><a href=" '+ store.website + ' ">Website</button>' +
