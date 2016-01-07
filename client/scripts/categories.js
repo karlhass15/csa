@@ -23,7 +23,11 @@ var categorySearch = function(){
         data: parameters,
         success: function(data) {
             if (data.length < 1) {
-                alert("There are no stores nearby that match your category criteria.");
+                swal({      title: "No Matching Stores",
+                            text: "Please select another category",
+                            timer: 2000,
+                            showConfirmButton: false
+                    });
 
             } else {
                 storeLocalData(data);
