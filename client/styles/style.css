@@ -778,6 +778,14 @@ li {
     text-decoration: none;
 }
 
+#storeList button {
+    height: 4vmax;
+    margin-top: -5%;
+}
+
+#storeList button a {
+    vertical-align: middle;
+}
 
 
 #mapContainer button {
