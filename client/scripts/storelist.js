@@ -91,7 +91,7 @@ function appDom(array) {
             '<img src=" ' + array[i].image + ' " />' +
             '</div>' +
             '<div class="col-xs-8">' +
-            '<h1 class="action" data-list=" '+ i +' "><strong>'+ array[i].name +' </strong></h1>' +
+            '<h1 class="action" data-list=" '+ i +' ">'+ array[i].name +'</h1>' +
             '<h2>' + miles+ ' miles</h2>' +
             '<button><a href=" '+ mapsLink+ ' ">Directions</button>' +
             '</div>'+

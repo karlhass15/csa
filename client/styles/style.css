@@ -639,17 +639,10 @@ li {
 }
 
 #contact h3{
-<<<<<<< HEAD
     font-family: 'ostrichBlack';
     /*padding: 12px;*/
     font-size: 5vmax;
-=======
-    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
-
-    padding: 12px;
-    font-size: 3em;
-
->>>>>>> master
+    padding: 0;
 }
 
 #about p a{
@@ -703,6 +696,10 @@ li {
     border-bottom: 0;
 }
 
+#createShortcut #grayBackground {
+    height: 100%;
+}
+
 /*#contactForm input::-webkit-input-placeholder {*/
 /*color: red;*/
 /*}*/
@@ -726,6 +723,7 @@ li {
 
 #storeList h1 {
     margin: 0;
+    margin-bottom: 2%;
     font-size: 5vmax;
 
 }
@@ -904,6 +902,10 @@ button a:hover{
 
 
 /* fix iOS bug not displaying 100vh correctly */
+
+
+
+
 /* ipad */
 /*LANDSCAPE iPad mini AND regular */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
