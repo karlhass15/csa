@@ -117,6 +117,21 @@ label{
     line-height: 4vmax;
 }
 
+#checklist label{
+    font-size: 2vmax;
+    display: inline;
+}
+
+#checklist input.group1{
+    font-size: 2vmax;
+    display: inline;
+    width: 2vmax;
+}
+
+#checklist ul{
+    height: 3vmax;
+}
+
 textarea {
     border:0;
     resize: none;
@@ -432,6 +447,8 @@ li {
     margin: 0;
 }
 
+
+
 /*///////////Home Page navigation/////////*/
 
 
@@ -582,13 +599,13 @@ li {
 /*/////////////On Map Popup/////////////*/
 
 #mapContainer h4 {
-     font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
-     /*background-color: #4a4a4c;*/
-     color: #e1e34c;
-     padding-left: 3px;
-     padding-top: 2px;
-     font-size: 7vmax;
- }
+    font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    /*background-color: #4a4a4c;*/
+    color: #e1e34c;
+    padding-left: 3px;
+    padding-top: 2px;
+    font-size: 7vmax;
+}
 
 #mapContainer h4:hover {
     color: #4a4a4c;
@@ -923,6 +940,14 @@ button a:hover{
 
 }
 
+/*///////Edit Store Page/////////////*/
+#editStoreForm input {
+    font-size: 2vmax;
+}
+
+#editStoreForm textarea {
+    font-size: 2vmax;
+}
 
 /* fix iOS bug not displaying 100vh correctly */
 
