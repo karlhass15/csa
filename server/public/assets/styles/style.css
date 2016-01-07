@@ -432,6 +432,7 @@ li {
     margin: 0;
 }
 
+
 /*///////////Home Page navigation/////////*/
 
 
@@ -1005,4 +1006,39 @@ button a:hover{
         height: 480px;
     }
 
+}
+
+
+
+
+
+@media only screen and (min-device-width : 1231px) and (max-device-width : 2500px) {
+
+    #homeCategory {
+        width: 40vmin;
+        height:44vmin;
+        /*margin: 3vmin;*/
+        margin-left: 4vmin;
+    }
+
+    #homeStore {
+        width: 40vmin;
+        height:44vmin;
+        /*margin: 3vmin;*/
+        margin-left: 2vmin;
+    }
+
+    #homeMap {
+        width: 40vmin;
+        height:44vmin;
+        /*margin: 3vmin;*/
+        margin-left: 2vmin;
+    }
+
+    #homeInformation {
+        width: 40vmin;
+        height:44vmin;
+        /*margin: 3vmin;*/
+        margin-left: 2vmin;
+    }
 }

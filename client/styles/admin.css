@@ -1,3 +1,54 @@
+#grayBackground p {
+    /*padding: 12px;*/
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    font-size: 3vmin;
+    line-height: 6vmin;
+}
+
+.btn-danger {
+    font-size: 2.4vh;
+    width: 14vmin;
+    height: 6vmin;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    bottom: 2px;
+}
+
+.btn-primary {
+    font-size: 2.4vh;
+    width: 14vmin;
+    height: 6vmin;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    bottom: 2px;
+    margin-right: 20px;
+    margin-top: 100px;
+}
+
+.col-md-3 {
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    width: 46vmin;
+    height: auto;
+    padding: 2px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+
+}
+/*p .col-md-3 {*/
+    /*font-size: 1vh;*/
+/*}*/
+
+
+
+
+
+
+/*PAGE styling*/
+
+
+
 @font-face {
     font-family: 'ostrich';
     src: url('ostrich-regular.ttf')
@@ -632,12 +683,6 @@ li {
     text-decoration: none;
 }
 
-#grayBackground p {
-    /*padding: 12px;*/
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 4vmin;
-    line-height: 6vmin;
-}
 
 #contact h3{
     font-family: 'ostrichBlack';
@@ -1040,5 +1085,13 @@ button a:hover{
         height:44vmin;
         /*margin: 3vmin;*/
         margin-left: 2vmin;
+    }
+}
+
+@media only screen and (min-device-width : 1231px) and (max-device-width : 2500px) {
+
+    .col-md-3 {
+    width: 48vmin;
+        display: inline-block;
     }
 }
