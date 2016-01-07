@@ -6,7 +6,7 @@ var Store = require('../models/store');
 router.get('/', function(req, res){
     console.log("Here is the req.query: ", req.query);
     Store.aggregate({$geoNear: {near: [parseFloat(req.query.lng), parseFloat(req.query.lat)], distanceField: "distance",
-            query : {categories : {$elemMatch : {category: req.query.category}}}, spherical: true, limit: 3 }},
+            query : {categories : {$elemMatch : {category: req.query.category}}}, spherical: true, limit: 10 }},
         function(err, data){
             if (err) {
                 console.log("Error in the query!: ", err);

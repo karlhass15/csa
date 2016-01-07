@@ -37,7 +37,7 @@ router.get('/', function(req, res){
     //}
 
 
-    Store.aggregate({$geoNear: {near: [parseFloat(req.query.lng), parseFloat(req.query.lat)], distanceField: "distance", spherical: true, limit: 3 }},
+    Store.aggregate({$geoNear: {near: [parseFloat(req.query.lng), parseFloat(req.query.lat)], distanceField: "distance", spherical: true, limit: 10 }},
      function(err, data) {
         if (err) {
             console.log("Error in the query!: ", err);

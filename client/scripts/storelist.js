@@ -108,8 +108,8 @@ function displayLoading(){
 }
 
 function displayCompleted(){
-    $('#spin').removeClass('spinner');
 
+    $('#spin').removeClass('spinner');
 
 }
 
