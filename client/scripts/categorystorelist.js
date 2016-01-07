@@ -7,7 +7,17 @@ $(document).ready(function(){
     displayLoading();
     getCurrentLocation();
 
+    $('body').on('click', '.action', function(){
+        //clear storage every time the button is clicked
+        localStorage.clear();
+        console.log('working');
+        console.log($(this).data('list'));
+        var arrayPosition = Number($(this).data('list'));
+        //set
+        localStorage.setItem('kittyFoo', JSON.stringify(storeIdArray[arrayPosition]));
+        window.location.href='store.html';
 
+    });
 });
 
 var retrieveStores = function(){

@@ -84,7 +84,7 @@ var getCurrentLocation = function() {
 //Map initialization function -- called within findStore function
 var initMap = function(myLocation, storesFound){
     storeContent = [];
-    var infoWindow = new google.maps.InfoWindow(), otherMarker, i;
+    var infoWindow = new google.maps.InfoWindow();
     var map = new google.maps.Map(document.getElementById('mapContainer'), {
         zoom: 12,
         center: myLocation,
@@ -97,29 +97,29 @@ var initMap = function(myLocation, storesFound){
             position: google.maps.ControlPosition.RIGHT_TOP
         }
     });
+    //Initializing the map bounds
+    var bounds = new google.maps.LatLngBounds();
     var marker = new google.maps.Marker({
         position: myLocation,
         map: map,
-        title: 'You Are Here',
+        title: 'You Are Here'
     });
     marker.addListener('click', function() {
         console.log("center");
     });
-    console.log("What is the storesFound?: ", storesFound);
     //Iteration through returned stores to create markers on the map
     for (var i = 0; i < storesFound.length; i++) {
-        console.log("Processing the marker data: ", storesFound[i]);
+
         var otherMarker = new google.maps.Marker({
             position: new google.maps.LatLng(storesFound[i].latlong[0], storesFound[i].latlong[1]),
             map: map,
             title: storesFound[i].name,
             //will likely need to iterate through an icon counter
-            icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png',
+            icon: 'http://maps.google.com/mapfiles/ms/micons/purple-dot.png'
         });
         //Setting up the store content in an array for easy reference to the popup creation below
         var storeData = setContentstring(storesFound[i], i);
         storeContent.push(storeData);
-        console.log("The storeContent is: ", storeContent);
         //creating the popup window for each marker
         google.maps.event.addListener(otherMarker, 'click', (function (otherMarker, i) {
             console.log("click!");
@@ -128,9 +128,16 @@ var initMap = function(myLocation, storesFound){
                 infoWindow.open(map, otherMarker);
             }
         })(otherMarker, i));
+        //setting the bounds for each marker as it is loaded
+        bounds.extend(otherMarker.position);
     }
+    //introducing the user's location to the bounds to ensure that they are mapped
+    bounds.extend(marker.position);
+    map.fitBounds(bounds);
     /////end init map
 };
+
+
 var setContentstring = function(store, num){
     var miles = (store.distance * 3963.2).toFixed(1);
     var query = "https://www.google.com/maps/dir/Current+Location/";
@@ -156,10 +163,13 @@ var setContentstring = function(store, num){
         '</div>';
     return contentString;
 };
+
+//spinner functions
 function displayLoading(){
     $('#spin').addClass('spinner');
     $('body').addClass('backgroundSpin');
 }
+
 function displayCompleted(){
     $('#spin').removeClass('spinner');
     $('body').removeClass('backgroundSpin');

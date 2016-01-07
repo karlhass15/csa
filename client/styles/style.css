@@ -117,6 +117,21 @@ label{
     line-height: 4vmax;
 }
 
+#checklist label{
+    font-size: 2vmax;
+    display: inline;
+}
+
+#checklist input.group1{
+    font-size: 2vmax;
+    display: inline;
+    width: 2vmax;
+}
+
+#checklist ul{
+    height: 3vmax;
+}
+
 textarea {
     border:0;
     resize: none;
@@ -589,7 +604,10 @@ li {
     padding-left: 3px;
     padding-top: 2px;
     font-size: 7vmax;
+}
 
+#mapContainer h4:hover {
+    color: #4a4a4c;
 }
 
 #mapContainer h5 {
@@ -726,7 +744,10 @@ li {
     margin: 0;
     margin-bottom: 2%;
     font-size: 5vmax;
+}
 
+#storeList h1:hover {
+    color: #4a4a4c;
 }
 
 #storeList h2 {
@@ -773,6 +794,14 @@ li {
     text-decoration: none;
 }
 
+#storeList button {
+    height: 4vmax;
+    margin-top: -5%;
+}
+
+#storeList button a {
+    vertical-align: middle;
+}
 
 
 #mapContainer button {
@@ -814,6 +843,14 @@ button a:hover{
 
 }
 
+#storeContainer p{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #4a4a4c;
+    font-size: 3vmax;
+    /*margin: 5% 0 0 0;*/
+
+}
+
 #storeContainer h2{
     font-family: 'ostrich', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     color: #4a4a4c;
@@ -823,6 +860,7 @@ button a:hover{
 
 #storeContainer img{
     width: 100%;
+    margin-top: 5%;
 }
 
 #storeContainer button{
@@ -901,6 +939,14 @@ button a:hover{
 
 }
 
+/*///////Edit Store Page/////////////*/
+#editStoreForm input {
+    font-size: 2vmax;
+}
+
+#editStoreForm textarea {
+    font-size: 2vmax;
+}
 
 /* fix iOS bug not displaying 100vh correctly */
 
