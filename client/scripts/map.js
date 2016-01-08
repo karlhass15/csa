@@ -13,14 +13,14 @@ $(document).ready(function(){
             $("#navMenu")
                 .stop(true, false)
                 .animate({
-                    bottom: 200
+                    bottom: 175
                 }, 600);
             flag = 0;
         } else {
             $("#navMenu")
                 .stop(true, false)
                 .animate({
-                    bottom: 100
+                    bottom: 75
                 }, 600);
             flag = 1;
         }
