@@ -340,7 +340,7 @@ li {
     position: relative;
     /*bottom: 0;*/
     z-index: 1;
-    bottom: 75px;
+    bottom: 50px;
     margin-bottom: -50px;
     /*background-color: #4a4a4c;*/
     /*height: 100px;*/
@@ -357,7 +357,7 @@ li {
     font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     text-align: center;
     vertical-align: middle;
-    height: 75px;
+    height: 50px;
     width:75px;
     padding-top: 15px;
     border-radius: 20% 20% 0 0;
@@ -366,7 +366,7 @@ li {
 
 #popupButton{
     font-size: 25pt;
-    margin-top: 5%;
+    margin-top: -10%;
 }
 
 #tabLinks{
