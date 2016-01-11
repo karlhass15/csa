@@ -67,6 +67,10 @@ header {
     /*margin-bottom: 10px;*/
 }
 
+#pageHeaderInformation{
+    font-size: 12vh;
+}
+
 
 #homePageHeader {
     background-color: #cccc00;
@@ -340,7 +344,7 @@ li {
     position: relative;
     /*bottom: 0;*/
     z-index: 1;
-    bottom: 100px;
+    bottom: 50px;
     margin-bottom: -50px;
     /*background-color: #4a4a4c;*/
     /*height: 100px;*/
@@ -357,8 +361,8 @@ li {
     font-family: 'ostrichBlack', "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
     text-align: center;
     vertical-align: middle;
-    height: 100px;
-    width:100px;
+    height: 50px;
+    width:75px;
     padding-top: 15px;
     border-radius: 20% 20% 0 0;
     z-index: 1;
@@ -366,7 +370,7 @@ li {
 
 #popupButton{
     font-size: 25pt;
-    margin-top: 15%;
+    margin-top: -10%;
 }
 
 #tabLinks{
@@ -1090,30 +1094,38 @@ button a:hover{
 @media only screen and (min-device-width : 1350px) and (max-device-width : 2500px) {
 
     #homeCategory {
-        width: 40vmin;
+        width: 38vmin;
         height:44vmin;
-        /*margin: 3vmin;*/
-        margin-left: 4vmin;
+        margin: 0vmin;
     }
 
     #homeStore {
-        width: 40vmin;
+        width: 38vmin;
         height:44vmin;
-        /*margin: 3vmin;*/
-        margin-left: 2vmin;
+        margin: 0vmin;
     }
 
     #homeMap {
-        width: 40vmin;
+        width: 38vmin;
         height:44vmin;
-        /*margin: 3vmin;*/
-        margin-left: 2vmin;
+        margin: 0vmin;
     }
 
     #homeInformation {
-        width: 40vmin;
+        width: 38vmin;
         height:44vmin;
-        /*margin: 3vmin;*/
-        margin-left: 2vmin;
+        margin: 0vmin;
     }
+}
+
+#login {
+    margin-top: 2%;
+    margin-left: 0;
+    width: 7vmax;
+    height: 3vmax;
+    font-size: 2vmax;
+}
+
+#loginUsername{
+    margin-bottom: 1%;
 }
