@@ -1095,25 +1095,25 @@ button a:hover{
     #homeCategory {
         width: 38vmin;
         height:44vmin;
-        margin: 0vmin;
+        margin: 2vmin;
     }
 
     #homeStore {
         width: 38vmin;
         height:44vmin;
-        margin: 0vmin;
+        margin: 2vmin;
     }
 
     #homeMap {
         width: 38vmin;
         height:44vmin;
-        margin: 0vmin;
+        margin: 2vmin;
     }
 
     #homeInformation {
         width: 38vmin;
         height:44vmin;
-        margin: 0vmin;
+        margin: 2vmin;
     }
 }
 
