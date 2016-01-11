@@ -150,9 +150,9 @@ var setContentstring = function(store, num){
         '<div class="col-xs-12">' +
         '<h4 class = "action" data-list=" '+ num +' "> '+store.name+'</h4>' +
 
-        '<img src="http://www.fillmurray.com/300/200" alt="store logo"/>'+
+        //'<img src="http://www.fillmurray.com/300/200" alt="store logo"/>'+
             // image tag below should work, color is webstorm error
-        //'<img src=" ' + store.image + ' " />' +
+        '<img src=" ' + store.image + ' " />' +
         '</div>' +
         '<div class="col-xs-12">' +
         '<h5>' + store.description + '</h5></br>'+
