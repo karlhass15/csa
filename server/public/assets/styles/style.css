@@ -1058,7 +1058,7 @@ button a:hover{
 
 
 
-@media only screen and (min-device-width : 1231px) and (max-device-width : 2500px) {
+@media only screen and (min-device-width : 1231px) and (max-device-width : 1350px) {
 
     #homeCategory {
         width: 40vmin;
@@ -1088,3 +1088,30 @@ button a:hover{
         margin-left: 2vmin;
     }
 }
+@media only screen and (min-device-width : 1351px) and (max-device-width : 2500px) {
+
+    #homeCategory {
+        width: 38vmin;
+        height:44vmin;
+        margin: 0vmin;
+    }
+
+    #homeStore {
+        width: 38vmin;
+        height:44vmin;
+        margin: 0vmin;
+    }
+
+    #homeMap {
+        width: 38vmin;
+        height:44vmin;
+        margin: 0vmin;
+    }
+
+    #homeInformation {
+        width: 38vmin;
+        height:44vmin;
+        margin: 0vmin;
+    }
+}
+

@@ -1091,25 +1091,25 @@ button a:hover{
 @media only screen and (min-device-width : 1351px) and (max-device-width : 2500px) {
 
     #homeCategory {
-        width: 36vmin;
+        width: 38vmin;
         height:44vmin;
         margin: 0vmin;
     }
 
     #homeStore {
-        width: 36vmin;
+        width: 38vmin;
         height:44vmin;
         margin: 0vmin;
     }
 
     #homeMap {
-        width: 36vmin;
+        width: 38vmin;
         height:44vmin;
         margin: 0vmin;
     }
 
     #homeInformation {
-        width: 36vmin;
+        width: 38vmin;
         height:44vmin;
         margin: 0vmin;
     }
