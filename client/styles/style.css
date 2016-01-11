@@ -1065,14 +1065,14 @@ button a:hover{
         width: 40vmin;
         height:44vmin;
         /*margin: 3vmin;*/
-        margin-left: 4vmin;
+        margin-left: 8vmin;
     }
 
     #homeStore {
         width: 40vmin;
         height:44vmin;
         /*margin: 3vmin;*/
-        margin-left: 2vmin;
+        margin-left: 8vmin;
     }
 
     #homeMap {
@@ -1090,6 +1090,7 @@ button a:hover{
     }
 }
 
+<<<<<<< HEAD
 /*For larger screen laptop*/
 @media only screen and (min-device-width : 1350px) and (max-device-width : 2500px) {
 
@@ -1118,6 +1119,8 @@ button a:hover{
     }
 }
 
+=======
+>>>>>>> 991a3e45602254d396156c5941cdc7180e1a03a7
 #login {
     margin-top: 2%;
     margin-left: 0;
