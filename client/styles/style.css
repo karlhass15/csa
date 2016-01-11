@@ -1055,10 +1055,39 @@ button a:hover{
 }
 
 
+@media only screen and (min-device-width : 1231px) and (max-device-width : 1350px) {
 
+    #homeCategory {
+        width: 40vmin;
+        height:44vmin;
+        /*margin: 3vmin;*/
+        margin-left: 4vmin;
+    }
 
+    #homeStore {
+        width: 40vmin;
+        height:44vmin;
+        /*margin: 3vmin;*/
+        margin-left: 2vmin;
+    }
 
-@media only screen and (min-device-width : 1231px) and (max-device-width : 2500px) {
+    #homeMap {
+        width: 40vmin;
+        height:44vmin;
+        /*margin: 3vmin;*/
+        margin-left: 2vmin;
+    }
+
+    #homeInformation {
+        width: 40vmin;
+        height:44vmin;
+        /*margin: 3vmin;*/
+        margin-left: 2vmin;
+    }
+}
+
+/*For larger screen laptop*/
+@media only screen and (min-device-width : 1350px) and (max-device-width : 2500px) {
 
     #homeCategory {
         width: 40vmin;
