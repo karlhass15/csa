@@ -13,14 +13,14 @@ $(document).ready(function(){
             $("#navMenu")
                 .stop(true, false)
                 .animate({
-                    bottom: 200
+                    bottom: 150
                 }, 600);
             flag = 0;
         } else {
             $("#navMenu")
                 .stop(true, false)
                 .animate({
-                    bottom: 100
+                    bottom: 50
                 }, 600);
             flag = 1;
         }
@@ -90,11 +90,11 @@ var initMap = function(myLocation, storesFound){
         center: myLocation,
         streetViewControl: true,
         streetViewControlOptions: {
-            position: google.maps.ControlPosition.RIGHT_TOP
+            position: google.maps.ControlPosition.LEFT_TOP
         },
         zoomControl: true,
         zoomControlOptions: {
-            position: google.maps.ControlPosition.RIGHT_TOP
+            position: google.maps.ControlPosition.LEFT_TOP
         }
     });
     //Initializing the map bounds
